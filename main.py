@@ -22,7 +22,7 @@ def test_is_palindrome():
     assert is_palindrome(1234321) ==True
     assert is_palindrome(5000) == False
 
-def get_n_choose_k(n , k):
+def get_n_choose_k(n: int , k: int ):
     '''
     Problema 10: Calculeaza valoarea combinarilor de n luate de k ori
     Input:
