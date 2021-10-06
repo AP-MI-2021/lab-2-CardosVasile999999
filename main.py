@@ -79,4 +79,7 @@ def main():
             break
         else:
             print('Optiune invalida')
+
+    test_is_palindrome()
+    test_get_n_choose_k()
 main()
