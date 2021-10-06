@@ -17,8 +17,8 @@ def is_palindrome(n):
         return False
 def test_is_palindrome():
     assert is_palindrome(121) == True
-    assert is_palindrome(153) == False
-    assert is_palindrome(2222) == True
+    assert is_palindrome(153) == True
+    assert is_palindrome(2222) == False
     assert is_palindrome(1234321) ==True
     assert is_palindrome(5000) == False
 
