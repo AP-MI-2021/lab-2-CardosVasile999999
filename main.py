@@ -59,16 +59,24 @@ def test_get_n_choose_k():
 
 
 def main():
-    '''
-    nr= int(input('Dati numarul: '))
-    inversul=is_palindrome(nr)
-    if inversul==True:
-        print(f'{nr} este palindrom')
-    else:
-        print(f'{nr} nu este palindrom')
-    '''
-    nn=int(input('Dati-l pe n: '))
-    nk=int(input('Dati-l pe k: '))
-    numarul=get_n_choose_k(nn, nk)
-    print(numarul)
+    while True:
+        print('1. Determină dacă un număr dat este palindrom.')
+        print('2. Combinari de n luate cate k.')
+        print('x.Exit')
+        optiune=input('Alege o optiune: ')
+        if optiune=='1':
+            nr=int(input('Dati numarul: '))
+            if is_palindrome(nr)==True:
+                print(f'{nr} este palindrom')
+            else:
+                print(f'{nr} nu este palindrom')
+        elif optiune=='2':
+            nn=int(input('Dati-l pe n: '))
+            nk = int(input('Dati-l pe k: '))
+            combinari=get_n_choose_k(nn, nk)
+            print(f'Combinari de {nn} luate cate {nk} este {combinari}')
+        elif optiune=='x':
+            break
+        else:
+            print('Optiune invalida')
 main()
