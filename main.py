@@ -22,15 +22,37 @@ def test_is_palindrome():
     assert is_palindrome(1234321) ==True
     assert is_palindrome(5000) == False
 
+def get_n_choose_k(n , k):
+    factorial_n=1
+    factorial_k=1
+    factorial_n_minus_k=1
+    for i in range(1, n+1):
+        factorial_n=factorial_n*i
+    for i in range(1, k+1):
+        factorial_k=factorial_k*i
+
+    for i in range(1, n-k+1):
+        factorial_n_minus_k=factorial_n_minus_k*i
+
+    return factorial_n//(factorial_k*factorial_n_minus_k)
+
+
+
 
 
 
 
 def main():
+    '''
     nr= int(input('Dati numarul: '))
     inversul=is_palindrome(nr)
     if inversul==True:
         print(f'{nr} este palindrom')
     else:
         print(f'{nr} nu este palindrom')
+    '''
+    nn=int(input('Dati-l pe n: '))
+    nk=int(input('Dati-l pe k: '))
+    numarul=get_n_choose_k(nn, nk)
+    print(numarul)
 main()
