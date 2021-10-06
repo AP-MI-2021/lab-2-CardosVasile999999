@@ -4,7 +4,7 @@ def is_palindrome(n):
     Input:
     -n: int
     Output:
-    boolean variable
+    boolean variable: True/False
     '''
     inv=0
     aux=n
@@ -23,6 +23,13 @@ def test_is_palindrome():
     assert is_palindrome(5000) == False
 
 def get_n_choose_k(n , k):
+    '''
+    Problema 10: Calculeaza valoarea combinarilor de n luate de k ori
+    Input:
+    -n, k: numere intregi date
+    Output:
+    -Combinari de n luate cate k : numar intreg
+    '''
     factorial_n=1
     factorial_k=1
     factorial_n_minus_k=1
@@ -35,6 +42,15 @@ def get_n_choose_k(n , k):
         factorial_n_minus_k=factorial_n_minus_k*i
 
     return factorial_n//(factorial_k*factorial_n_minus_k)
+
+
+def test_get_n_choose_k():
+    assert get_n_choose_k(6, 2)==15
+    assert get_n_choose_k(5, 3)==11
+    assert get_n_choose_k(8, 4)==70
+    assert get_n_choose_k(9, 3)==85
+    assert get_n_choose_k(12, 5)==792
+    assert get_n_choose_k(13, 3)==200
 
 
 
