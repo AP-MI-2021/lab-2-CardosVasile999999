@@ -17,8 +17,8 @@ def is_palindrome(n):
         return False
 def test_is_palindrome():
     assert is_palindrome(121) == True
-    assert is_palindrome(153) == True
-    assert is_palindrome(2222) == False
+    assert is_palindrome(153) == False
+    assert is_palindrome(2222) == True
     assert is_palindrome(1234321) ==True
     assert is_palindrome(5000) == False
 
@@ -46,11 +46,30 @@ def get_n_choose_k(n: int , k: int ):
 
 def test_get_n_choose_k():
     assert get_n_choose_k(6, 2)==15
-    assert get_n_choose_k(5, 3)==11
+    assert get_n_choose_k(5, 3)==10
     assert get_n_choose_k(8, 4)==70
-    assert get_n_choose_k(9, 3)==85
+    assert get_n_choose_k(9, 3)==84
     assert get_n_choose_k(12, 5)==792
-    assert get_n_choose_k(13, 3)==200
+    assert get_n_choose_k(13, 2)==78
+
+
+def get_age_in_days(dd, mm, yyyy):
+    '''
+    intput: ziua , luna, anul in care te-ai nascut
+    output: numarul de zile pe care le ai
+    '''
+    aaaa=2021-yyyy
+    aaaa=aaaa*365
+    ll=10-mm
+    ll=30*ll
+    zz=365-dd
+    return aaaa+ll+zz
+
+
+
+
+
+
 
 
 
@@ -62,6 +81,7 @@ def main():
     while True:
         print('1. Determină dacă un număr dat este palindrom.')
         print('2. Combinari de n luate cate k.')
+        print('3. Determinati numarul de zile a unei persoane')
         print('x.Exit')
         optiune=input('Alege o optiune: ')
         if optiune=='1':
@@ -75,6 +95,12 @@ def main():
             nk = int(input('Dati-l pe k: '))
             combinari=get_n_choose_k(nn, nk)
             print(f'Combinari de {nn} luate cate {nk} este {combinari}')
+        elif optiune=='3':
+            ziua=int(input('Dati ziua '))
+            luna=int(input('Dati luna '))
+            anul=int(input('Dati Anul '))
+            v=get_age_in_days(ziua, luna, anul)
+            print(f'omul are {v} zile')
         elif optiune=='x':
             break
         else:
@@ -82,4 +108,5 @@ def main():
 
     test_is_palindrome()
     test_get_n_choose_k()
-main()
+if __name__ == '__main__':
+    main()
