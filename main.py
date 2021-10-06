@@ -12,12 +12,14 @@ def is_palindrome(n):
         inv=inv*10+n%10
         n=n//10
     if inv==aux:
-        return 1
+        return True
     else:
-        return 0
+        return False
+
 
 
 
 def main():
-       
+    t=is_palindrome(123)
+    print("3")
     main()
