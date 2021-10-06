@@ -1,4 +1,4 @@
-# Laborator 2, săptămâna 2
+
 
 Predați rezolvările în săptămâna 2 într-un fișier `main.py` comis în repository-ul vostru de pe github. 
 
