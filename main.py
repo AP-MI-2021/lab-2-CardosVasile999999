@@ -65,7 +65,7 @@ def get_age_in_days(dd, mm, yyyy):
     zz=365-dd
     return aaaa+ll+zz
 
-def test_get_age_in_days(zz, ll, aaaa):
+def test_get_age_in_days():
     assert get_age_in_days(15, 1, 2003)==7190
     assert get_age_in_days(29, 8, 2004)==6601
     assert get_age_in_days(9, 6, 1985)==13616
