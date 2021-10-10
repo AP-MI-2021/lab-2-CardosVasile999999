@@ -112,5 +112,6 @@ def main():
 
     test_is_palindrome()
     test_get_n_choose_k()
+    test_get_age_in_days()
 if __name__ == '__main__':
     main()
